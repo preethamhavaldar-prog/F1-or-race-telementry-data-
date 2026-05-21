@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceMind AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>RaceMind AI</h1>
+        <p class="subtitle">Your AI Race Engineer</p>
+
+        <div class="dashboard">
+
+            <div class="card">
+    <label>Track</label>
+    <input type="text" id="track" placeholder="Monza">
+</div>
+
+<div class="card">
+    <label>Current Lap</label>
+    <input type="number" id="lap" placeholder="24">
+</div>
+
+<div class="card">
+    <label>Tire Compound</label>
+    <select id="tire">
+        <option>Soft</option>
+        <option>Medium</option>
+        <option>Hard</option>
+        <option>Intermediate</option>
+        <option>Wet</option>
+    </select>
+</div>
+
+<div class="card">
+    <label>Tire Wear %</label>
+    <input type="number" id="wear" placeholder="45">
+</div>
+
+<div class="card">
+    <label>Weather</label>
+    <select id="weather">
+        <option>Sunny</option>
+        <option>Cloudy</option>
+        <option>Rain Incoming</option>
+        <option>Heavy Rain</option>
+    </select>
+</div>
+
+<div class="card">
+    <label>Fuel Level %</label>
+    <input type="number" id="fuel" placeholder="62">
+</div>
+
+
+        </div>
+
+        <button class="strategy-btn" id="strategyBtn">
+            Generate Strategy
+        </button>
+
+        <div class="response-box" id="responseBox">
+            awaiting race data...
+        </div>
+
+    </div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
