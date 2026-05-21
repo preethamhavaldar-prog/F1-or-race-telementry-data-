@@ -6,7 +6,7 @@ from google import genai
 app = Flask(__name__)
 
 # PASTE YOUR API KEY HERE
-client = genai.Client(api_key="AIzaSyDt1xNOu7xKEqvocjNbJAGS6k3hK2bOHJY")
+client = genai.Client(api_key=YOUR_API_KEY")
 
 @app.route("/")
 def home():
